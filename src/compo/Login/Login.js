@@ -5,14 +5,15 @@ import { getEmail } from '../../logic/InicioS';
 export default function Login() {
   const agaemail = useRef();
   const agaConstra = useRef();
-  const are = async () => {
-    debugger;
+  const are = async (e) => {
+    //  debugger;
+    //e.preventDefault();
     const email = agaemail.current.value;
     const constra = agaConstra.current.value;
 
-    const arr = await getEmail(email, constra);
+    await getEmail(email, constra);
 
-    console.log(arr);
+    //console.log(arr);
   };
 
   return (
